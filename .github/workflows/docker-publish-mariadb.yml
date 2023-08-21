@@ -8,9 +8,9 @@ on:
 env:
   USERNAME: usafirstamen
   REGISTRY: docker.io
-  run: echo "REPOSITORY_NAME=${GITHUB_REPOSITORY#*/}" >> $GITHUB_ENV
-  IMAGE_NAME: ${{ env.REPOSITORY_NAME }}
-  REPOSITORY: ${{ env.REPOSITORY_NAME }}
+  
+  IMAGE_NAME: ${GITHUB_REPOSITORY#*/}
+  
 jobs:
   build:
     runs-on: ubuntu-latest
