@@ -17,7 +17,8 @@ env:
   # REGISTRY: ghcr.io
   REGISTRY: docker.io
   # github.repository as <account>/<repo>
-  IMAGE_NAME: ${{ github.repository }}
+  run: echo "REPOSITORY_NAME=${GITHUB_REPOSITORY#*/}" >> $GITHUB_ENV
+  IMAGE_NAME: ${{ env.REPOSITORY_NAME }}
 
 
 jobs:
