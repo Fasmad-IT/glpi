@@ -9,7 +9,7 @@ env:
   USERNAME: usafirstamen
   REGISTRY: docker.io
   
-  IMAGE_NAME: ${GITHUB_REPOSITORY#*/}
+  IMAGE_NAME: fasmad
   
 jobs:
   build:
